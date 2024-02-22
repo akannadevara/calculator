@@ -1,46 +1,52 @@
-let operator="";
 let firstNumber="";
-let secondNumber="";
+let SecondNumber="";
+let operator="";
 
-
-
-
-function appendNumber(num){
-   if(operator===""){
+function appendNumber(num)
+{
+if(operator==""){
     firstNumber+=num;
     document.getElementById("result").value=firstNumber;
-   }
-   else{
-    secondNumber+=num;
-    document.getElementById("result").value=secondNumber;
-   }
-   
+}
+else{
+    SecondNumber+=num;
+    document.getElementById("result").value=firstNumber+operator+SecondNumber;
+}
+}
+function setOperator(op)
+{
+    operator=op;
+    document.getElementById("result").value=firstNumber+""+operator;
+}
 
-}
-function setOperator(op){
-    operator=op;    
-}
-function calculate(){
+
+function calculate()
+{
     let result;
     switch(operator){
         case '+':
-            result=parseInt(firstNumber)+parseInt(secondNumber);
+            result=parseInt(firstNumber)+parseInt(SecondNumber);
             break;
-        case '-':
-            result=parseInt(firstNumber)-parseInt(secondNumber);
+            case '-':
+            result=parseInt(firstNumber)-parseInt(SecondNumber);
             break;
-        case '*':
-            result=parseInt(firstNumber)*parseInt(secondNumber);
+
+            case '*':
+            result=parseInt(firstNumber)*parseInt(SecondNumber);
             break;
-        case '/':
-            result=parseInt(firstNumber)/parseInt(secondNumber);
+
+            case '/':
+            result=parseInt(firstNumber)/parseInt(SecondNumber);
             break;
+
+
     }
     document.getElementById("result").value=result;
 }
 function clearresult(){
-    operator="";
- firstNumber="";
- secondNumber="";
+firstNumber="";
+ SecondNumber="";
+ operator="";
  document.getElementById("result").value="";
 }
+
