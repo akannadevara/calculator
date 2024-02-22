@@ -1,0 +1,22 @@
+ table{
+    background-color:g;
+}
+body{
+    background-image: url(ttt.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#result{
+    border-radius: 8px;
+    border-color: black;
+    
+}
+button:hover{
+    background-color: rgb(217, 43, 226);
+}
+button{
+    background-color:skyblue;
+}
+h2{
+    background-color: aqua;
+}
